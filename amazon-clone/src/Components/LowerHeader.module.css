@@ -1,0 +1,54 @@
+.lower_header {
+    background-color: #232f3e;
+    color: white;
+    padding: 10px; /* Add some padding for better spacing */
+}
+
+.lower_header ul {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    padding: 0; /* Remove default padding */
+    margin: 0;  /* Remove default margin */
+}
+
+.lower_header ul li {
+    padding: 8px;
+}
+
+.lower_header ul li:first-child {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+    .lower_header {
+        flex-direction: column; /* Flex direction column for smaller screens */
+        align-items: flex-start; /* Align items to start for better spacing */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .lower_header ul {
+        flex-direction: column; /* Stack the list items vertically */
+        width: 100%; /* Ensure it takes full width */
+    }
+
+    .lower_header ul li {
+        width: 100%; /* Make each list item take full width */
+        padding: 10px 0; /* Adjust padding for better touch targets */
+        text-align: left; /* Align text to the left */
+    }
+
+    .lower_header ul li:not(:first-child) {
+        display: none; /* Hide all but the first list item */
+    }
+
+    .lower_header ul li:first-child {
+        width: 100%; /* Ensure the first item takes full width */
+    }
+
+    .language {
+        display: none; /* Hide language selector if present */
+    }
+}

@@ -1,0 +1,138 @@
+/* 
+
+.category{
+    height:350px;
+    width:350px;
+    background-color:white;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.category img {
+    width: 100%;
+    object-fit: contain;
+    max-height: 250px;
+    padding: 0px 10px;
+
+}
+.category a{
+    text-decoration: none;
+    columns: rgb(35,35,35);
+}
+.category h2,
+.category p{
+    padding: 5px;
+    margin-left: 15px;
+}
+.category p{
+   font-size: 12px;
+   font-weight: bold;
+   color: rgb(9,132,209);
+    
+}
+ */
+/* Default styles */
+.category_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grid layout with flexible columns */
+    gap: 40px; /* Spacing between grid items */
+    padding: 20px; /* Add padding to the container */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+    justify-items: center; /* Center items horizontally */
+}
+
+.category {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%; /* Default to full width */
+    max-width: 250px; /* Limit max width to 250px */
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 200px; /* Maximum height for all images */
+    padding: 10px;
+}
+
+.category a {
+    text-decoration: none;
+    color: rgb(35, 35, 35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure link takes full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.category h2 {
+    font-size: 16px; /* Adjusted font size for title */
+    margin: 10px 0; /* Added margin */
+    text-align: center; /* Center-align text */
+}
+
+.category p {
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(9, 132, 209);
+    margin: 5px 0; /* Added margin */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .category_container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted column width for smaller screens */
+        gap: 10px; /* Reduced grid gap */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .category {
+        max-width: 200px; /* Adjust max width for smaller screens */
+    }
+
+    .category img {
+        max-height: 150px; /* Adjusted maximum height for smaller screens */
+        padding: 5px; /* Reduced padding */
+    }
+
+    .category h2 {
+        font-size: 14px; /* Reduced font size for title on smaller screens */
+        margin: 5px 0; /* Adjusted margin */
+    }
+
+    .category p {
+        font-size: 10px; /* Reduced font size for paragraph on smaller screens */
+        margin: 3px 0; /* Adjusted margin */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .category_container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjusted column width for smallest screens */
+        gap: 5px; /* Reduced grid gap */
+        padding: 5px; /* Reduced padding */
+    }
+
+    .category {
+        max-width: 150px; /* Adjust max width for smallest screens */
+    }
+
+    .category img {
+        max-height: 120px; /* Further adjusted maximum height for smallest screens */
+        padding: 5px; /* Ensure padding is not too large */
+    }
+
+    .category h2 {
+        font-size: 12px; /* Further reduced font size for title on smallest screens */
+        margin: 5px 0; /* Adjusted margin */
+    }
+
+    .category p {
+        font-size: 9px; /* Further reduced font size for paragraph on smallest screens */
+        margin: 3px 0; /* Adjusted margin */
+    }
+}
