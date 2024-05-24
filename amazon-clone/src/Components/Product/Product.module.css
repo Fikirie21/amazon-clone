@@ -60,7 +60,7 @@ background-color: var(--primary-shade);
   margin: 0 auto;
 }  
 
-.product_flex_card{
+.product_flex{
     box-shadow:none;
     height: auto;
     display: flex;
@@ -69,20 +69,31 @@ background-color: var(--primary-shade);
 
 }
 
-.product_flex_card{
+.product_flex h3{
     padding: 20px 0px;
 }
 
 
-.product_flex_card{
+.product_flex .button{
  position: static;
  margin-right: 40px;
  display: block;
- width: 150%;
+ width: 150px;
 
 }
 
-.product_flex_card{
+.product_flex{
  height: 50vh;
 }
   
+.product_flex img{
+ width: 300px !important;
+ height: auto;
+}
+  
+@media screen and (max-width: 768px) {
+    .product_flex{
+        display: flex;
+        flex-direction: column;
+    }
+} 

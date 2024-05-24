@@ -87,17 +87,22 @@
 // export default Header;
 
 
-import React from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from "../lowerHeader";
 import { Link } from "react-router-dom";
+import { DataContext } from "../DataProvider/DataProvider";
 
-function Header() {
+const  Header =() =>{
+  const [{ basket }, dispatch] = useContext(DataContext);
+  console.log(basket.length)
   return (
-    <>
+    <section className="fixed-sticky"
+
+    >
       <section className="wrapper_header">
         <div className="header_container">
           {/* Logo */}
@@ -164,13 +169,13 @@ function Header() {
 
             <Link to="/cart" className="cart_link">
               <BiCart />
-              <span className="cart_count">7</span>
+              <span className="cart_count">{basket.length}</span>
             </Link>
           </div>
         </div>
       </section>
       <LowerHeader />
-    </>
+    </section>
   );
 }
 
