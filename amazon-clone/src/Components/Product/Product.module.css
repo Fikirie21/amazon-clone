@@ -1,4 +1,6 @@
-  .card_container{
+
+
+   .card_container{
     width: 250px;
      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     padding: 10px;
@@ -59,8 +61,7 @@ background-color: var(--primary-shade);
 .product_container section {
   margin: 0 auto;
 }  
-
-.product_flex{
+.product_flex_card{
     box-shadow:none;
     height: auto;
     display: flex;
@@ -69,24 +70,19 @@ background-color: var(--primary-shade);
 
 }
 
-.product_flex h3{
+.product_flex_card h3{
     padding: 20px 0px;
 }
-
-
-.product_flex .button{
+.product_flex_card .button{
  position: static;
  margin-right: 40px;
  display: block;
  width: 150px;
-
 }
-
-.product_flex{
+.product_flex_card{
  height: 50vh;
 }
-  
-.product_flex img{
+  .product_flex_card img{
  width: 300px !important;
  height: auto;
 }

@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Layout from "../../Components/Layout/Layout";
@@ -39,11 +37,12 @@ function Results() {
         ) : (
           <div className={styles.Products_container_results}>
             {results.map((product) => (
-              <ProductCard 
-              key={product.id} 
-              product={product}
-              renderDesc={false}
-              renderAdd={true} />
+              <ProductCard
+                key={product.id}
+                product={product}
+                renderDesc={false}
+                renderAdd={true}
+              />
             ))}
           </div>
         )}

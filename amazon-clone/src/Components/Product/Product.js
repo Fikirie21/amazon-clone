@@ -1,9 +1,8 @@
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../../Components/Product/ProductCard"; // Correct path to ProductCard component
 import styles from "../Product/Product.module.css";
-import Loader from "../../Components/Loader"; 
+import Loader from "../../Components/Loader";
 
 function Product() {
   const [products, setProducts] = useState([]);
@@ -29,11 +28,13 @@ function Product() {
         <Loader />
       ) : (
         <section className={styles.product_container}>
-          {products.map((singleProduct) => {
-            return
-          
-            <ProductCard  renderAdd={true} product={singleProduct} key={singleProduct.id} />
-          })}
+          {products.map((singleProduct) => (
+            <ProductCard
+              renderAdd={true}
+              product={singleProduct}
+              key={singleProduct.id}
+            />
+          ))}
         </section>
       )}
     </>
