@@ -85,3 +85,19 @@ background-color: var(--primary-color);
         order: 1;
     }
 }
+
+.subtotal input[type="checkout"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px; /* Adjust width as needed */
+  height: 20px; /* Adjust height as needed */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.subtotal input[type="checkout"]:checked {
+  background-color: var(--primary-color);
+}
