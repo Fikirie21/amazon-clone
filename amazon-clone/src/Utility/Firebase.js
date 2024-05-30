@@ -20,9 +20,13 @@
 // export const auth = getAuth(app);
 // export const bd = app.firestore();
 
+//********* */
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -31,7 +35,7 @@ const firebaseConfig = {
   projectId: "clone-6a997",
   storageBucket: "clone-6a997.appspot.com",
   messagingSenderId: "516678463747",
-  appId:  "1:516678463747:web:743b13a85acea2def7f936",
+  appId: "1:516678463747:web:743b13a85acea2def7f936",
 };
 
 // Initialize Firebase
@@ -40,4 +44,8 @@ const auth = getAuth(app);
 const firestore = getFirestore(app);
 
 export { auth, firestore };
+
+
+
+
 

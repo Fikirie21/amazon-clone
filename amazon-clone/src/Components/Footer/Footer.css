@@ -1,0 +1,65 @@
+.amazon-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #232f3e;
+  color: #ffffff;
+  padding: 40px;
+}
+
+.footer-column {
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+/* Anchor styles */
+.footer-column a {
+  color: #ffffff; /* White color for anchors */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-column a:hover {
+  color: #f0f0f0; /* Whitish color on hover */
+}
+
+.back-to-top-bar {
+  background-color: #394e64; /* Slightly lighter color than the footer */
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.back-to-top-bar p {
+  margin: 0;
+}
+
+.back-to-top-bar p:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .amazon-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

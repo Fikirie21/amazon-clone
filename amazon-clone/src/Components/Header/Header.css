@@ -142,7 +142,8 @@
 /* Hover effects */
 .order_container a:hover,
 .delivery:hover,
-.accountt :hover,
+.account_link ,
+
 .return:hover,
 .logo_container a:hover,
 .flag_container:hover,
@@ -152,6 +153,26 @@
   border: 1px solid white;
   border-radius: 3px;
 }
+
+
+
+.hover-effect {
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+
+
+.account_link:hover .tooltip {
+  display: block;
+}
+
+
+
+
+
+
+
 
 /* Media query for small screens */
 @media screen and (max-width: 576px) {
@@ -207,3 +228,5 @@
  top: 0;
  z-index: 100;
 }
+
+

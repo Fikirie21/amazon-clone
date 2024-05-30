@@ -6,9 +6,11 @@ import { BiCart } from "react-icons/bi";
 import LowerHeader from "../lowerHeader";
 import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/Firebase";
+// import Footer from "../Footer/Footer"
 
 function Header() {
-  const [{ basket }, dispatch] = useContext(DataContext);
+  const [{user, basket }, dispatch] = useContext(DataContext);
   // console.log(basket.length);
   const totalItem = basket?.reduce((amount, item) => {
     return item.amount + amount;
@@ -66,10 +68,20 @@ function Header() {
               </select>
             </div>
 
-            <Link to="/auth" className="account_link">
-              <div className="accountt">
-                <p>Sign In</p>
-                <span>Account & Lists</span>
+            <Link to={!user && "/auth"} className="account_link">
+              <div>
+                {user ? (
+                  <>
+                    <p>Hello {user?.email?.split("@")[0]}</p>
+                    <span onClick={()=>auth()}>Sign Out</span>
+                  </>
+                ) : (
+                  <>
+                 <p>Hello Sign In</p>
+                 <span> Account & Lists</span>
+                  </>
+                )}
+               
               </div>
             </Link>
 
@@ -88,6 +100,7 @@ function Header() {
         </div>
       </section>
       <LowerHeader />
+      {/* <Footer/> */}
     </section>
   );
 }
